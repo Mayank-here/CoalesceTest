@@ -18,7 +18,13 @@ locations:
       "3":
         database: ""
         schema: ""
-macros: {}
+macros:
+  Macro-1:
+    id: "1"
+    macroString: |-
+      {%- macro even_odd(column) -%}
+          CASE WHEN MOD({{column}},2) = 0 THEN '2' ELSE '1' END
+      {%- endmacro %}
 packages: {}
 projects: {}
 stepTypes:

@@ -83,7 +83,7 @@ steps:
               - columnReferences:
                   - columnCounter: ddbaf198-605e-48c5-a265-1f4d746fba58
                     stepCounter: 8eab24e1-9d66-482b-8f55-ce1b4b50e98c
-                transform: ""
+                transform: "{{ even_odd('\"CUSTOMER\".\"C_NATIONKEY\"') }}"
           - appliedColumnTests:
               hasNull: false
               isDistinct: false
